@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const withSvgr = require('next-plugin-svgr');
 
-module.exports = nextConfig
+const nextConfig = withSvgr({
+    reactStrictMode: false,
+    poweredByHeader: false,
+});
+
+module.exports = nextConfig;
